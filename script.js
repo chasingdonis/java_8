@@ -26,7 +26,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
       donationText,
       articleElements;
 
-  donatePrompt = window.prompt('How much would you like to donate?');
+donatePrompt = window.prompt('How much would you like to donate?');
 
   if(donatePrompt >= 100){
     donationText = document.createTextNode('Thank you for your very generous donation!');
