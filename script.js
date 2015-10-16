@@ -20,13 +20,16 @@ var churchillSpeech = {
     speechesArray = [churchillSpeech, ghandiSpeech, demosthenesSpeech],
     donatePrompt;
 
+  var oldest = speechesArray[0].year,
+      newest = speechesArray[0].year;
+
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   var donationDisplay = document.createElement('h3'),
       donationText,
       articleElements;
 
-donatePrompt = window.prompt('How much would you like to donate?');
+  donatePrompt = window.prompt('How much would you like to donate?');
 
   if(donatePrompt >= 100){
     donationText = document.createTextNode('Thank you for your very generous donation!');
