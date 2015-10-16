@@ -47,16 +47,6 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   document.getElementById('SideNav').appendChild(donationDisplay);
 });
 
-
-  for(var i = 0; i < speechesArray.length; i++){
-    if(speechesArray[i].year < oldest){
-      oldest = speechesArray[i].year;
-    }
-    if(speechesArray[i].year > newest){
-      newest = speechesArray[i].year;
-    }
-  };
-
 function getAuthorAndYearString(speech){
 ConsoleDisplay.innerHTML = 'This speech was written by ' + speech.author + ' in ' + speech.year + '<br>';}
 
@@ -69,6 +59,15 @@ function displayBCEString(speech){
 };
 
 function getOldestOrYoungestString(speech){
+      for(var i = 0; i < speechesArray.length; i++){
+    if(speechesArray[i].year < oldest){
+      oldest = speechesArray[i].year;
+    }
+    if(speechesArray[i].year > newest){
+      newest = speechesArray[i].year;
+    }
+      };
+    
   if(speech.year === oldest){
     document.getElementById('ConsoleDisplay').innerHTML +='<br>This is the oldest speech on the page.<br><br>';
   }
